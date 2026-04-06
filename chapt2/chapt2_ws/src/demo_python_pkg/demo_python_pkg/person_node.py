@@ -12,7 +12,7 @@ class PersonNode(Node):
 
 def main():
     rclpy.init()
-    node = PersonNode('person_node', '法外狂徒张三', '18')
+    node = PersonNode('person_node', '法外狂徒张三', 18)
     node.eat('鱼香肉丝')
     rclpy.spin(node)
     rclpy.shutdown()
