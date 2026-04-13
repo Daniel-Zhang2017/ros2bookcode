@@ -43,7 +43,7 @@ class PatrolNode(BasicNavigator):
         """
         if self.latest_image is not None:
           pose = self.get_current_pose()
-          cv_image = self.bridge.imgmsg_to_cv2(self.latest_image)
+          cv_image = self.bridge.imgmsg_to_cv2(self.latest_image, 'bgr8')
           cv2.imwrite(f'{self.image_save_path}image_{pose.translation.x:3.2f}_{pose.translation.y:3.2f}.png', cv_image)
 
 
